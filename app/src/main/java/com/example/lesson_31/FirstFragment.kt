@@ -24,7 +24,7 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val count = 0
-        viewModel = ViewModelProvider(this, MainViewModelFactory(count))[MainViewModel::class.java]
+        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
         observeCounter()
         bidding?.btnCounter?.setOnClickListener {
             viewModel?.plusCount()
