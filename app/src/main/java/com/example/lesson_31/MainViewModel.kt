@@ -5,10 +5,12 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class MainViewModel(val list:List<String>): ViewModel() {
-    var textLiveData: MutableLiveData<String> =MutableLiveData()
+class MainViewModel(val count:Int): ViewModel() {
+    var countLiveData: MutableLiveData<Int> =MutableLiveData(count)
 
-    fun changeText(){
-        textLiveData.value = "${list.random()} by Andrew"
+    fun plusCount(){
+        countLiveData.value  = countLiveData.value?.plus(1)
     }
+
+
 }

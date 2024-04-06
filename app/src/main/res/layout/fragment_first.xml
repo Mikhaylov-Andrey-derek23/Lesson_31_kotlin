@@ -11,7 +11,7 @@
         android:id="@+id/tvCounter"
         android:layout_marginTop="0dp"
         android:textSize="56dp"
-        android:text="null text"/>
+        android:text="0"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,6 +19,6 @@
         android:id="@+id/btnCounter"
         android:layout_marginTop="150dp"
         android:textSize="56dp"
-        android:text="Generate text"/>
+        android:text="+"/>
 
 </FrameLayout>

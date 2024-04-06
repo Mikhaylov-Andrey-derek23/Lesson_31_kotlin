@@ -23,18 +23,18 @@ class FirstFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val list = listOf("First", "Second", "Third")
-        viewModel = ViewModelProvider(this, MainViewModelFactory(list))[MainViewModel::class.java]
+        val count = 0
+        viewModel = ViewModelProvider(this, MainViewModelFactory(count))[MainViewModel::class.java]
         observeCounter()
         bidding?.btnCounter?.setOnClickListener {
-            viewModel?.changeText()
+            viewModel?.plusCount()
         }
 
     }
 
     private fun observeCounter() {
-        viewModel?.textLiveData?.observe(viewLifecycleOwner){
-            bidding?.tvCounter?.text = it
+        viewModel?.countLiveData?.observe(viewLifecycleOwner){
+            bidding?.tvCounter?.text = it.toString()
         }
 
     }
