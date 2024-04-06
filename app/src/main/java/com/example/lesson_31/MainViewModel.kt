@@ -12,5 +12,9 @@ class MainViewModel(val count:Int): ViewModel() {
         countLiveData.value  = countLiveData.value?.plus(1)
     }
 
+    fun minusCount(){
+        countLiveData.value  = countLiveData.value?.plus(-1)
+    }
+
 
 }

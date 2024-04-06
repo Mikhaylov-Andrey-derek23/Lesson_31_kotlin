@@ -16,9 +16,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:id="@+id/btnCounter"
+        android:id="@+id/btnPlus"
         android:layout_marginTop="150dp"
         android:textSize="56dp"
         android:text="+"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/btnMinus"
+        android:layout_marginTop="250dp"
+        android:textSize="56dp"
+        android:text="-"
+        />
 
 </FrameLayout>

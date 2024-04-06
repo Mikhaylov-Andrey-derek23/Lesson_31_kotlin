@@ -26,8 +26,11 @@ class FirstFragment : Fragment() {
         val count = 0
         viewModel = ViewModelProvider(this, MainViewModelFactory(count))[MainViewModel::class.java]
         observeCounter()
-        bidding?.btnCounter?.setOnClickListener {
+        bidding?.btnPlus?.setOnClickListener {
             viewModel?.plusCount()
+        }
+        bidding?.btnMinus?.setOnClickListener {
+            viewModel?.minusCount()
         }
 
     }
